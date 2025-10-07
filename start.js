@@ -1,11 +1,12 @@
 // --- All Required Imports ---
 const { spawn } = require('child_process');
 const https = require('https');
-const path = 'path';
-const fs = 'fs';
+const path = require('path');
+const fs = require('fs');
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const pty = require("node-pty");
+const bodyParser = require("body-parser");
 const helmet = require("helmet");
 
 // --- Part 0: Environment and Configuration ---
