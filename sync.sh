@@ -33,11 +33,7 @@ sync_repo() {
         echo "No changes to commit." >> "$LOG_FILE"
     fi
 
-    # Pull latest changes
-    git pull origin "$BRANCH" --rebase >> "$LOG_FILE" 2>&1
-
-    # Push changes
-    git push origin "$BRANCH" >> "$LOG_FILE" 2>&1
+    git push origin "$BRANCH" --force>> "$LOG_FILE" 2>&1
 
     echo "Sync completed." >> "$LOG_FILE"
 }
