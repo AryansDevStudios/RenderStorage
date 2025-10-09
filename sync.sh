@@ -3,7 +3,7 @@
 # --- CONFIGURATION ---
 REPO_DIR="/opt/render/project/src"  # Path to your Git repository
 BRANCH="main"                        # Your branch
-INTERVAL=600                         # 600 seconds = 10 minutes
+INTERVAL=10                         
 LOG_FILE="$REPO_DIR/.gitlog"         # Log file
 
 # --- Run in background if not already ---
