@@ -21,3 +21,6 @@ git push -u origin main
 
 
 npm install express http-proxy-middleware node-pty body-parser helmet cors mime-types xterm
+
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
