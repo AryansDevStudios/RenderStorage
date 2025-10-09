@@ -17,10 +17,9 @@ git pull origin main
 git branch -M main
 git add . 
 git commit -m "Initial commit" 
-git push -u origin main
 
 
 npm install express http-proxy-middleware node-pty body-parser helmet cors mime-types xterm
 
-echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+echo 'export PATH=/opt/render/project/src/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
