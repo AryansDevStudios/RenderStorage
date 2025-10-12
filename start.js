@@ -20,9 +20,9 @@
 
 
     // --- Part 0: Environment and Configuration ---
-    const projectPath = process.env.PROJECT_PATH || '/opt/render/project/src/'; //'/workspaces/RenderStorage/'
+    const projectPath = process.env.PROJECT_PATH || process.cwd();
     
-    const publicPort = process.env.PORT || 8080;
+    const publicPort = process.env.PORT || 5000;
     const filebrowserPort = 8081;
     const keepAliveUrl = process.env.RENDER_EXTERNAL_URL;
 
