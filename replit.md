@@ -63,6 +63,11 @@ This is a web-based file management and terminal application built with Node.js 
 - Configured workflow to run on port 5000
 - Set up VM deployment configuration
 
+### Terminal & Keep-Alive Fixes
+- Fixed terminal resize 400 errors by using fetch with proper Content-Type headers
+- Configured automatic keep-alive pings using REPLIT_DEV_DOMAIN
+- Keep-alive pings now run every 10 seconds automatically in Replit environment
+
 ### Dependencies Installed
 - express, http-proxy-middleware, node-pty
 - body-parser, helmet, cors, mime-types
