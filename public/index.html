@@ -58,10 +58,12 @@
       // Notify server of current size
       function notifyResize() {
         const dims = { cols: term.cols, rows: term.rows };
-        const resizeUrl = "/terminal/resize"; // EDITED PATH
-        navigator.sendBeacon ?
-          navigator.sendBeacon(resizeUrl, JSON.stringify(dims)) :
-          fetch(resizeUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(dims) });
+        const resizeUrl = "/terminal/resize";
+        fetch(resizeUrl, { 
+          method: "POST", 
+          headers: { "Content-Type": "application/json" }, 
+          body: JSON.stringify(dims) 
+        }).catch(err => console.error('Resize failed:', err));
       }
 
       // Initial resize notification

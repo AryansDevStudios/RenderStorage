@@ -24,7 +24,8 @@
     
     const publicPort = process.env.PORT || 5000;
     const filebrowserPort = 8081;
-    const keepAliveUrl = process.env.RENDER_EXTERNAL_URL;
+    const keepAliveUrl = process.env.RENDER_EXTERNAL_URL || 
+                         (process.env.REPLIT_DEV_DOMAIN ? `https://${process.env.REPLIT_DEV_DOMAIN}` : null);
 
 
     // --- Part 1: Start Backend Services (File Browser + PTY) ---
