@@ -53,35 +53,8 @@ This is a web-based file management and terminal application built with Node.js 
 - **5000**: Main web server (public)
 - **8081**: File browser (internal only)
 
-## Recent Changes (October 12, 2025)
 
-### Replit Environment Setup
-- Updated `PROJECT_PATH` to use `process.cwd()` for Replit compatibility
-- Changed default port from 8080 to 5000 (Replit standard)
-- Installed Python 3.11 and gcc for node-pty compilation
-- Made filebrowser binary executable
-- Configured workflow to run on port 5000
-- Set up VM deployment configuration
-
-### Terminal & Keep-Alive Fixes
-- Fixed terminal resize 400 errors by using fetch with proper Content-Type headers
-- Configured automatic keep-alive pings using REPLIT_DEV_DOMAIN
-- Keep-alive pings now run every 10 seconds automatically in Replit environment
-
-### Dependencies Installed
-- express, http-proxy-middleware, node-pty
-- body-parser, helmet, cors, mime-types
-- xterm (deprecated, but functional)
-
-## Running the Application
-
-### Development
-The application runs automatically via the Replit workflow:
-```bash
-node start.js
-```
-
-### Manual Setup (if needed)
+## Manual Setup (if needed)
 If dependencies are missing, install them with:
 ```bash
 npm install
@@ -118,4 +91,6 @@ For production deployments, consider:
 - The terminal PTY process auto-restarts if it crashes
 - Keep-alive pings are optional (only if RENDER_EXTERNAL_URL is set)
 - All dependencies are managed via npm
-- The application is designed to work on Render and Replit cloud platforms
+
+
+
